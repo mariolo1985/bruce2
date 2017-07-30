@@ -10,6 +10,10 @@ var _react = require('react');
 
 var _react2 = _interopRequireDefault(_react);
 
+var _propTypes = require('prop-types');
+
+var _propTypes2 = _interopRequireDefault(_propTypes);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -22,18 +26,33 @@ var Picmod = function (_Component) {
     _inherits(Picmod, _Component);
 
     function Picmod() {
+        var _ref;
+
+        var _temp, _this, _ret;
+
         _classCallCheck(this, Picmod);
 
-        return _possibleConstructorReturn(this, (Picmod.__proto__ || Object.getPrototypeOf(Picmod)).apply(this, arguments));
+        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+            args[_key] = arguments[_key];
+        }
+
+        return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = Picmod.__proto__ || Object.getPrototypeOf(Picmod)).call.apply(_ref, [this].concat(args))), _this), _this.getImgSrc = function () {
+            var imgSrc = _this.props.imgSrc;
+
+            var result = !imgSrc ? Picmod.defaultProps.imgSrc : imgSrc;
+
+            return result;
+        }, _temp), _possibleConstructorReturn(_this, _ret);
     }
 
     _createClass(Picmod, [{
         key: 'render',
         value: function render() {
+            var imgSrc = this.getImgSrc();
             return _react2.default.createElement(
                 'div',
                 { className: 'pic-mod-container' },
-                'Hello world'
+                _react2.default.createElement('img', { className: 'pic-mod-img', src: imgSrc })
             );
         }
     }]);
@@ -41,4 +60,10 @@ var Picmod = function (_Component) {
     return Picmod;
 }(_react.Component);
 
+Picmod.PropTypes = {
+    imgSrc: _propTypes2.default.string
+};
+Picmod.defaultProps = {
+    imgSrc: ''
+};
 exports.default = Picmod;
