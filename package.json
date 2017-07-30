@@ -1,0 +1,30 @@
+{
+  "name": "Bruce",
+  "version": "2.0.0",
+  "description": "Brucey",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "lessc less/master.less css/master.css && cleancss -o css/master.min.css css/master.css",
+    "build:component": "babel ./component --out-dir ./build",
+    "build:injector": "NODE_ENV=production webpack --process -p",
+    "build:devinjector": "webpack --process",
+    "build:dev": "npm run build:css &&  npm run build:component && npm run build:devinjector",
+    "build:prod": "npm run build:css && npm run build:component && npm run build:injector"
+  },
+  "author": "M Lo",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-core": "^6.20.0",
+    "babel-loader": "^6.2.9",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-react": "^6.16.0",
+    "babel-preset-stage-1": "^6.16.0",
+    "prop-types": "^15.5.10",
+    "webpack": "^1.14.0"
+  }
+}
