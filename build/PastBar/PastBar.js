@@ -16,37 +16,30 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 
 function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; } // Bar to display previous winners
 
-var BruceBanner = function (_Component) {
-    _inherits(BruceBanner, _Component);
 
-    function BruceBanner() {
-        _classCallCheck(this, BruceBanner);
+var PastBar = function (_Component) {
+    _inherits(PastBar, _Component);
 
-        return _possibleConstructorReturn(this, (BruceBanner.__proto__ || Object.getPrototypeOf(BruceBanner)).apply(this, arguments));
+    function PastBar() {
+        _classCallCheck(this, PastBar);
+
+        return _possibleConstructorReturn(this, (PastBar.__proto__ || Object.getPrototypeOf(PastBar)).apply(this, arguments));
     }
 
-    _createClass(BruceBanner, [{
+    _createClass(PastBar, [{
         key: 'render',
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { className: 'bruce-banner' },
-                _react2.default.createElement(
-                    'div',
-                    { className: 'bruce-header-container' },
-                    _react2.default.createElement(
-                        'span',
-                        { className: 'bruce-header-text' },
-                        'Photoshop Battleground'
-                    )
-                )
+                null,
+                'PastBar'
             );
         }
     }]);
 
-    return BruceBanner;
+    return PastBar;
 }(_react.Component);
 
-exports.default = BruceBanner;
+exports.default = PastBar;

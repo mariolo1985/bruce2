@@ -1,7 +1,19 @@
 body {
+  font-family: "Helvetica Neue", Arial;
   margin: 0;
   padding: 0;
 }
 .bruce-banner {
-  background: url('images/banner.jpg') no-repeat;
+  height: 150px;
+  background: url('../images/banner.jpg') no-repeat;
+}
+.bruce-banner .bruce-header-container {
+  padding: 25px 0 35px 35px;
+  width: 250px;
+}
+.bruce-banner .bruce-header-container .bruce-header-text {
+  font-size: 38px;
+  font-weight: 600;
+  color: #FFFFFF;
+  text-transform: uppercase;
 }
