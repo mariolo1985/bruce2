@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { Picmod, BruceBanner } from '../build';
+import { BruceBanner, PastBar } from '../build';
 
 window.onload = function () {
     // Banner
@@ -9,12 +9,22 @@ window.onload = function () {
             <BruceBanner />
         ),
         document.getElementById('bruce-banner')
-    )
-    // Child pics
+    );
+    // Past bar
+    const pastWinnersObj = [
+        {
+            WeekLabel: 'Last Week',
+            WeekTitle: 'Steve Harvey',
+            WeekWinnerName: '1st Captain Falcon',
+            WeekImgSrc: './images/bg.jpg'
+        }
+    ]
     render(
         (
-            <Picmod />
+            <PastBar battleTitle='Trump Jr' battleTimeLeft='12' pastWinnersObj={pastWinnersObj} />
         ),
-        document.getElementById('test')
+        document.getElementById('bruce-pastbar')
     );
+    // Child pics
+
 }
